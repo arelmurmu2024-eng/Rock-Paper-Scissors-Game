@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+
+    background-color: rgb(1, 4, 24);
+}
+
+#card{
+    height: 80vh;
+    width: 50vw;
+
+    border: none none none;
+    border-radius:  40px;
+
+    background-color: #03152a40;
+    /* backdrop-filter: blur(100px); */
+    box-shadow: 5px 5px 20px #00b4d8;
+}
+
+@media (max-width: 800px) {
+    #card{
+    height: 35vh;
+    width: 80vw;
+}
+}
