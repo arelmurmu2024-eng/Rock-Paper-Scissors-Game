@@ -61,7 +61,7 @@ body{
     animation: loading 1s steps(240) 0s infinite normal;
 } */
 /* .loader:active{  
-     animation: loading 2s ease-in-out 0s infinite normal; 
+    animation: loading 2s ease-in-out 0s infinite normal; 
     border: 5px solid rgb(57, 198, 1);
     transition: border 0.1s steps(100) 0ms;
 } */
@@ -104,6 +104,7 @@ body{
     width: 90px;
     top: 12px;
     left: 16px;
+    z-index: 30;
 
     border-radius: 100%;
     user-select: none;
@@ -126,6 +127,20 @@ body{
     grid-column: 3;
     grid-row: 2;
 }
+.moves:hover + .loader{
+     animation: loading 1s steps(240) 0s infinite normal;
+}
+.moves:active + .loader{
+    animation: loading 2s ease-in-out 0s infinite normal; 
+    border: 5px solid rgb(57, 198, 1);
+    transition: border 0.1s steps(100) 0ms;
+}
+.island:has(.moves:active) #triangle{
+    animation: filling 1s ease-in 0s infinite normal; 
+    /* border: 10px solid rgb(57, 198, 1); */
+    /* transition: border 0.1s steps(100) 0ms; */
+}
+
 #paper{
     grid-column: 2;
     grid-row: 4;
@@ -176,6 +191,11 @@ body{
         left: 9vw;
         border-width: 5px;
     }
+    .island:has(.moves:active) #triangle{
+    animation: filling 1s ease-in-out 0s infinite normal; 
+    border: 5px solid rgb(57, 198, 1);
+    transition: border 0.1s steps(100) 0ms;
+    }
     #status{
         
         height: 20vh;
@@ -206,5 +226,25 @@ body{
     100%{
         transform: rotate(360deg);
         border-top: 5px solid rgb(198, 149, 1)
+    }
+}
+@keyframes filling {
+    0%{
+        border-top-color:#01cfa9;
+    }
+    25%{
+        border-top-color:#01cfa9;
+        border-right-color:rgb(57, 198, 1);
+    }
+    75%{
+        border-top-color:#01cfa9;
+        border-right-color:rgb(57, 198, 1);
+        border-bottom-color:rgb(198, 191, 1);
+    }
+    100%{
+        border-top-color:#01cfa9;
+        border-right-color:rgb(57, 198, 1);
+        border-bottom-color:rgb(198, 191, 1);
+        border-left-color: rgb(198, 149, 1);
     }
 }
