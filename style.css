@@ -144,6 +144,10 @@ body{
     animation: loading 2s ease-in-out 0s infinite normal; 
     border: 5px solid rgb(57, 198, 1);
     transition: border 0.1s steps(100) 0ms;
+    transform: scale(0.9);
+}
+.island:has(.moves:active) .moves-img{
+    transform: scale(0.9);
 }
 .island:has(.moves:active) #triangle{
     animation: filling 1s ease-in 0s infinite normal; 
