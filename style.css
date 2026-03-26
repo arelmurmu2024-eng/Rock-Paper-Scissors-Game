@@ -202,7 +202,7 @@ body{
         width: 52%;
 
         top: 3vh;
-        left: 9vw;
+        left: 11.5vw;
         border-width: 5px;
     }
     .island:has(.moves:active) #triangle{
