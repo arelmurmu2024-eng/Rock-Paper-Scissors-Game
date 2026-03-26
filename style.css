@@ -4,7 +4,7 @@
     user-select: none;
     touch-action: manipulation;
 }
-button, img{
+img{
     pointer-events: none;
     -webkit-user-drag: none;
 }
