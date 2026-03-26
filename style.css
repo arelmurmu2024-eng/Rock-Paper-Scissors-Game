@@ -1,3 +1,13 @@
+*{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+}
+button, img{
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
 body{
     display: flex;
     justify-content: center;
